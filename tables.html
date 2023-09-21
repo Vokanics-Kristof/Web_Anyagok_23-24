@@ -4,9 +4,166 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Táblázatok</title>
+    <style>
+        h1, h2, h3{
+            text-align: center;
+            margin-top: 10px;
+        }
+        section, .alfejezet{
+            border: 2px solid darkslategray;
+            margin: 5px;
+            background-color: wheat;
+        }
+        section h3{
+            text-align: center;
+        }
+        .tablakeret {
+            border: 1px solid darkslategray;
+        }
+        .sorkeret {
+            border: 1px solid darkslategray;
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5px;
+        }
+        .cellakeretezes td{
+            border: 1px solid darkslategray;
+        }
+        .egyvonalas{
+            border-collapse: collapse;
+        }
+        table.borderradius, table.borderradius td{
+            border-radius: 10px;
+        }
+        .fixedcellmeret td{
+            width: 60px;
+            height: 60px;
+            border-width: 3px;
+            border-color: orange;
+        }
+    </style>
 </head>
 <body>
+    <h1>Táblázatok</h1>
+    <section>
+        <h3>Alap szerkezet</h3>
+        <table>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </table>
+    </section>
+    <div class="alfejezet">
+        <h2>Táblázat keretezése</h2>
+        <section>
+            <h3>Táblázat keretezése</h3>
+            <table class="tablakeret">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>Cellák keretezése</h3>
+            <table class="cellakeretezes">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>Táblázat és cellák keretezése, dupla vonalak nélkül</h3>
+            <table class="cellakeretezes tablakeret">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>Cellák keretezése, dupla vonalak nélkül</h3>
+            <table class="cellakeretezes egyvonalas">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
     
+        <section>
+            <h3>Cellák keretezése, dupla vonalak nélkül</h3>
+            <table class="cellakeretezes tablakeret borderradius">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+    
+        <section>
+            <h3>border-style</h3>
+            <table class="tablakeret cellakeretezes fixedcellmeret">
+                <tr>
+                    <td style="border-style: dotted"></td>
+                    <td style="border-style: dashed"></td>
+                    <td style="border-style: solid"></td>
+                </tr>
+                <tr>
+                    <td style="border-style: double"></td>
+                    <td style="border-style: groove"></td>
+                    <td style="border-style: ridge"></td>
+                </tr>
+                <tr>
+                    <td style="border-style: inset"></td>
+                    <td style="border-style: outset"></td>
+                    <td style="border-style: hidden"></td>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+
 </body>
 </html>
