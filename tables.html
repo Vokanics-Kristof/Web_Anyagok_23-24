@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Táblázatok</title>
     <style>
+        body{
+            background-color: rgb(44, 44, 44);
+        }
         h1, h2, h3{
             text-align: center;
             margin-top: 10px;
@@ -29,7 +32,7 @@
             margin-right: auto;
             margin-bottom: 5px;
         }
-        .cellakeretezes td{
+        .cellakeretezes td, th{
             border: 1px solid darkslategray;
         }
         .egyvonalas{
@@ -164,6 +167,145 @@
         </section>
     </div>
 
+    <div class="alfejezet">
+        <h2>Táblázatok méretezése</h2>
+        <section>
+            <table style="height: 100px; width: 100px;" class="tablakeret cellakeretezes">
+                <tr>
+                    <td style="width: 0px;">1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr style="height: 100%">
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+    <div class="alfejezet">
+        <h2>Fejlécek</h2>
+        <section>
+            <h3>Alapesetben</h3>
+            <table class="tablakeret cellakeretezes egyvonalas">
+                <tr>
+                    <th>H1</th>
+                    <th>H2</th>
+                    <th>H3</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h3>colspan</h3>
+            <p style="text-align: center;">A colspan egy HTML attribútum és nem CSS!</p>
+            <table class="tablakeret cellakeretezes egyvonalas">
+                <tr>
+                    <th colsapn="2">H1</th>
+                    <th>H2</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table style="width: 95%; " class="tablakeret cellakeretezes egyvonalas">
+                <tr>
+                    <th></th>
+                    <th>Hétfő</th>
+                    <th>Kedd</th>
+                    <th>Szerda</th>
+                    <th>Csütörtök</th>
+                    <th>Péntek</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td>Matematika (emelt)</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>Szakmai angol</td>
+                    <td>Asztali alkalmazások</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Matematika (emelt)</td>
+                    <td>Irodalom</td>
+                    <td>Testnevelés A</td>
+                    <td>Adatbázis-kezelés I.</td>
+                    <td>Asztali alkalmazások</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Matematika</td>
+                    <td>Irodalom</td>
+                    <td>Magyar nyelv</td>
+                    <td>Adatbázis-kezelés I.</td>
+                    <td>Asztali alkalmazások</td>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td>Matematika</td>
+                    <td>Fizika</td>
+                    <td>Adatbázis-kezelés I.</td>
+                    <td></td>
+                    <td>IKT Projektmunka II.</td>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <td></td>
+                    <td>Osztályfőnöki</td>
+                    <td></td>
+                    <td></td>
+                    <td>IKT Projektmunka II.</td>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </section>
+    </div>
 
 </body>
 </html>
