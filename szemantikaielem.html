@@ -7,11 +7,66 @@
     <title>Szemantikai elemek</title>
     <style>
 
+        h1{
+            margin: 0px;
+        }
+        body{
+            margin: 0px;
+        }
+        header{
+            position: sticky;
+            background-color: black;
+            color: beige;
+            text-align: center;
+            left: 0px;
+            top: 0px;
+        }
+        header + *{
+            position: sticky;
+            background-color: black;
+            color: beige;
+            text-align: center;
+            left: 0px;
+            top: 38px;
+        }
+        p{
+            max-width: 80%;
+        }
+        ul{
+            margin-top: 0px;
+            vertical-align: middle;
+        }
+        li, a{
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        aside{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            background-color: aqua;
+            height: 100%;
+            width: 15%;
+        }
+        footer{
+            margin: 0px;
+            width: 100%;
+            color: white;
+            background-color: black;
+            vertical-align: bottom;
+            position: sticky;
+        }
+        footer>p{
+            margin: 0;
+        }
     </style>
 </head>
 <body>
     <header>
-        <title>Weboldal címe</title>
+        <h1>Weboldal címe</h1>
     </header>
     <nav>
         <ul>
@@ -24,8 +79,24 @@
     <main>
         <section>
             <h2>Fő tartalom</h2>
-            <p>Ez itt a fő tartalom része</p>
+            <article>
+                <h3>Bejegyzés</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Simul atque natum animal est, gaudet voluptate et eam appetit ut bonum, aspernatur dolorem ut malum. Sed erat aequius Triarium aliquid de dissensione nostra iudicare. Duo Reges: constructio interrete. Cuius ad naturam apta ratio vera illa et summa lex a philosophis dicitur. Facile est hoc cernere in primis puerorum aetatulis. Quicquid porro animo cernimus, id omne oritur a sensibus; Sed ne, dum huic obsequor, vobis molestus sim. </p>
+
+                <p>Nec vero sum nescius esse utilitatem in historia, non modo voluptatem. Hanc in motu voluptatem -sic enim has suaves et quasi dulces voluptates appellat-interdum ita extenuat, ut M. Quae in controversiam veniunt, de iis, si placet, disseramus. Idemne potest esse dies saepius, qui semel fuit? De illis, cum volemus. Non modo carum sibi quemque, verum etiam vehementer carum esse? Et hunc idem dico, inquieta sed ad virtutes et ad vitia nihil interesse. </p>
+
+                <p>Stoicos roga. Erit enim instructus ad mortem contemnendam, ad exilium, ad ipsum etiam dolorem. Ac tamen hic mallet non dolere. Immo videri fortasse. </p>
+
+                <p>Traditur, inquit, ab Epicuro ratio neglegendi doloris. </p>
+
+            </article>
         </section>
     </main>
+    <aside>
+        <p>Ez egy aside elem</p>
+    </aside>
+    <footer>
+        <p>Copyright 2023</p>
+    </footer>
 </body>
 </html>
