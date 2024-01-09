@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::before ::after</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        h1::before{
+            content: ">>>";
+            color: red;
+            border: solid 1px red;
+            padding: 5px;
+            margin: 5px;
+            background: yellow;
+        }
+        h1::after{
+            content: "<<<";
+            color: red;
+            border: solid 1px red;
+            padding: 5px;
+            margin: 5px;
+            background: yellow;
+        }
+        body{
+            background: #323232;
+            color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <h1>::before</h1>
+    <p class="beforeSample">before mintapélda</p>
+    <h1>::after</h1>
+</body>
+</html>
