@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        h1::before{
+            content: "Hello world from before: ";
+            color: green;
+        }
+        h1::after{
+            content: url('https://media.tenor.com/iDFvR7a8JiMAAAAM/cat-cat-meow.gif');
+            background-size: 10px 20px;
+            width: 10px;
+            height: 20px;
+            margin-left: 20px;
+        }
+        div::after{
+            content: "Works after div too!";
+        }
+        div::before{
+            content: "Works after div too!";
+        }
+    </style>
+</head>
+<body>
+    <!--
+    <script>
+        const h1 = document.createElement("h1"); //Nem lehet később definiálni
+        h1.innerText = "JS";
+        h1.align = "center";
+        h1.style = "background: red";
+        document.body.style = "margin: 0; padding: 0;"
+        document.body.appendChild(h1);
+    </script>
+    -->
+    <script>
+        document.body.style.backgroundColor = "black";
+        const title = document.createElement("h1");
+        title.innerText = "Hello";
+        title.style.color = "green";
+        title.style.textAlign = "center";
+        document.body.appendChild(title);
+
+        //DIV
+        const div = document.createElement("div");
+        div.style.backgroundColor = "rgb(255, 115, 255)";
+        div.style.display = "inline";
+
+        const br = document.createElement("br");
+        div.appendChild(br);
+
+        const spa = document.createElement("span");
+        spa.innerText = "This content is inside the div!";
+        spa.style.backgroundColor = "rgb(1, 255, 128)";
+        div.appendChild(spa);
+
+        const v = document.createElement("br");
+        div.appendChild(v);
+        
+        document.body.appendChild(div);
+    </script>
+</body>
+</html>
