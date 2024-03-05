@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Viewer</title>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.0.0/dist/markdown-it.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it-emoji@1.2.1/dist/markdown-it-emoji.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        #input,
+        #output {
+            flex: 1 1 0%;
+            min-height: 100vh;
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 0.5rem;
+        }
+
+        #output {
+            background-color: #D0D0D0;
+        }
+
+        #output :not(p) {
+            margin-bottom: 1rem;
+        }
+
+        #output hr {
+            margin-top: 1rem;
+        }
+
+        #output p {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="Generate()">Generate</button>
+    <div style="display: flex;">
+        <div>
+            <textarea id="input" style="width: 800px; height: 500px;"></textarea>
+        </div>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function Generate() {
+            var markdownText = document.getElementById('input').value;
+            var md = window.markdownit({ typographer: true, breaks: true })
+            var result = md.render(markdownText);
+            document.getElementById('output').innerHTML = result;
+        }
+    </script>
+
+</body>
+</html>
